@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
 
     def index
-        @cocktails = Cocktail.new
+        @cocktails = Cocktail.all
     end
 
     def show
@@ -13,7 +13,6 @@ class CocktailsController < ApplicationController
 
     def new
         @cocktail = Cocktail.new
-        
     end
 
     def create
@@ -22,7 +21,6 @@ class CocktailsController < ApplicationController
         redirect_to cocktail_path(@cocktail)
        else
         render 'new'
-           
        end
         
     end
